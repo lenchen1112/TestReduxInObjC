@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ReduxState : NSObject
+@interface ReduxState : NSObject <NSCopying>
 
 @property (nonatomic, assign, readwrite) NSInteger count;
 

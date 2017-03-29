@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong, readwrite) ReduxState *state;
 @property (nonatomic, strong) NSArray <ReduxReducerBlock> *reducers;
-@property (nonatomic, strong) dispatch_queue_t serialQueue;
 
 @end
 
@@ -29,15 +28,6 @@
     });
 
     return sharedInstance;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _serialQueue = dispatch_queue_create("Redux Store Action Queue", DISPATCH_QUEUE_SERIAL);
-    }
-    return self;
 }
 
 - (ReduxState *)state
@@ -58,7 +48,7 @@
 
 - (void)dispatchAction:(ReduxAction *)action
 {
-    dispatch_async(self.serialQueue, ^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         for (ReduxReducerBlock block in self.reducers) {
             self.state = block(self.state, action);
         }

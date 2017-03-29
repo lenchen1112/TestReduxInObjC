@@ -20,11 +20,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcR-8u-DLz">
+                                <rect key="frame" x="10" y="60" width="355" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="dNr-0D-fe1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6Q-ne-wHV">
+                                <rect key="frame" x="262.5" y="310" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="3VK-vU-2UM"/>
+                                    <constraint firstAttribute="height" constant="50" id="GUZ-5d-a8O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="didTapOnDecrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXw-ML-deE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9d-6J-UoJ">
+                                <rect key="frame" x="137" y="310" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="01p-Jp-eAk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Random"/>
+                                <connections>
+                                    <action selector="didTapOnRandomAssignButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HTo-N2-NJu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6O-CT-6Ph">
+                                <rect key="frame" x="62.5" y="310" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="E8E-2C-BRb"/>
+                                    <constraint firstAttribute="height" constant="50" id="V7Q-ru-Mrn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="didTapOnIncrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NhA-Ni-YDW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rcR-8u-DLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1q8-uU-Bae"/>
+                            <constraint firstItem="rcR-8u-DLz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="IMJ-9C-U5d"/>
+                            <constraint firstItem="n6O-CT-6Ph" firstAttribute="top" secondItem="rcR-8u-DLz" secondAttribute="bottom" constant="50" id="MJI-tn-pJm"/>
+                            <constraint firstItem="X6Q-ne-wHV" firstAttribute="top" secondItem="rcR-8u-DLz" secondAttribute="bottom" constant="50" id="Qbw-6d-AlL"/>
+                            <constraint firstItem="L9d-6J-UoJ" firstAttribute="height" secondItem="n6O-CT-6Ph" secondAttribute="height" id="aek-oO-6Qf"/>
+                            <constraint firstItem="rcR-8u-DLz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="aij-cJ-hox"/>
+                            <constraint firstItem="L9d-6J-UoJ" firstAttribute="centerX" secondItem="rcR-8u-DLz" secondAttribute="centerX" id="ax2-Lk-VYK"/>
+                            <constraint firstItem="X6Q-ne-wHV" firstAttribute="centerX" secondItem="rcR-8u-DLz" secondAttribute="centerX" constant="100" id="f2b-Bn-1Qx"/>
+                            <constraint firstItem="n6O-CT-6Ph" firstAttribute="centerX" secondItem="rcR-8u-DLz" secondAttribute="centerX" constant="-100" id="jQS-CP-W6f"/>
+                            <constraint firstItem="L9d-6J-UoJ" firstAttribute="centerY" secondItem="n6O-CT-6Ph" secondAttribute="centerY" id="ycW-VG-dh8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="rcR-8u-DLz" id="eXc-fk-KZ3"/>
+                        <outlet property="decrementButton" destination="X6Q-ne-wHV" id="HKI-op-KeT"/>
+                        <outlet property="incrementButton" destination="n6O-CT-6Ph" id="y6W-jF-uYx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

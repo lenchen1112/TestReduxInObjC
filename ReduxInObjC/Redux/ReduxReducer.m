@@ -12,10 +12,10 @@
 
 + (NSArray *)avaliableReducerBlocks
 {
-    return @[[self countingReducer]];
+    return @[[self countReducer], [self randomAssignReducer]];
 }
 
-+ (ReduxReducerBlock)countingReducer {
++ (ReduxReducerBlock)countReducer {
     ReduxReducerBlock block = ^ReduxState*(ReduxState *state, ReduxAction *action) {
         if (!state) {
             state = [[ReduxState alloc] init];
@@ -26,6 +26,7 @@
                 return ({
                     ReduxState *newState = [state copy];
                     newState.count++;
+                    NSLog(@"ReduxActionTypeIncrement: %ld -> %ld", (long)state.count, (long)newState.count);
                     newState;
                 });
 
@@ -33,6 +34,29 @@
                 return ({
                     ReduxState *newState = [state copy];
                     newState.count--;
+                    NSLog(@"ReduxActionTypeDecrement: %ld -> %ld", (long)state.count, (long)newState.count);
+                    newState;
+                });
+
+            default:
+                return state;
+        }
+    };
+    return block;
+}
+
++ (ReduxReducerBlock)randomAssignReducer {
+    ReduxReducerBlock block = ^ReduxState*(ReduxState *state, ReduxAction *action) {
+        if (!state) {
+            state = [[ReduxState alloc] init];
+        }
+
+        switch (action.type) {
+            case ReduxActionTypeRandomAssignBelowTen:
+                return ({
+                    ReduxState *newState = [state copy];
+                    newState.count = [action.payload integerValue];
+                    NSLog(@"ReduxActionTypeRandomAssign: %ld -> %ld", (long)state.count, (long)newState.count);
                     newState;
                 });
 

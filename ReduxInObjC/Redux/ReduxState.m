@@ -19,4 +19,15 @@
     return self;
 }
 
+- (id)copyWithZone:(nullable NSZone *)zone
+{
+    id copy = [[[self class] alloc] init];
+
+    if (copy) {
+        [copy setCount:self.count];
+    }
+
+    return copy;
+}
+
 @end

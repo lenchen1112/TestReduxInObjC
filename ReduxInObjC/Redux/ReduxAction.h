@@ -11,7 +11,7 @@
 typedef NS_ENUM(NSInteger, ReduxActionType) {
     ReduxActionTypeIncrement,
     ReduxActionTypeDecrement,
-    ReduxActionTypeReset,
+    ReduxActionTypeRandomAssignBelowTen,
     ReduxActionTypeCount
 };
 
