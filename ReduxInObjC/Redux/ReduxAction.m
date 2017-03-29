@@ -21,8 +21,8 @@
 {
     self = [super init];
     if (self) {
-        self.type = type;
-        self.payload = payload;
+        _type = type;
+        _payload = payload;
     }
     return self;
 }

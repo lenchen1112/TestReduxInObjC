@@ -10,4 +10,13 @@
 
 @implementation ReduxState
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _count = 0;
+    }
+    return self;
+}
+
 @end

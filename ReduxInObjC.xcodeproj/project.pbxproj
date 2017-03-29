@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8512F0111E8C16AC00FD7B3C /* ReduxStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512F0101E8C16AC00FD7B3C /* ReduxStore.m */; };
 		855B5F171E8BF86F0041D677 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 855B5F161E8BF86F0041D677 /* main.m */; };
 		855B5F1A1E8BF86F0041D677 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 855B5F191E8BF86F0041D677 /* AppDelegate.m */; };
 		855B5F1D1E8BF86F0041D677 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855B5F1C1E8BF86F0041D677 /* AppViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8512F00F1E8C16AC00FD7B3C /* ReduxStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReduxStore.h; sourceTree = "<group>"; };
+		8512F0101E8C16AC00FD7B3C /* ReduxStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReduxStore.m; sourceTree = "<group>"; };
 		855B5F121E8BF86F0041D677 /* ReduxInObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxInObjC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855B5F161E8BF86F0041D677 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		855B5F181E8BF86F0041D677 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				85B32D581E8BFF7C00ECA8E2 /* ReduxState.m */,
 				85B32D5A1E8C057600ECA8E2 /* ReduxReducer.h */,
 				85B32D5B1E8C057600ECA8E2 /* ReduxReducer.m */,
+				8512F00F1E8C16AC00FD7B3C /* ReduxStore.h */,
+				8512F0101E8C16AC00FD7B3C /* ReduxStore.m */,
 			);
 			path = Redux;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8512F0111E8C16AC00FD7B3C /* ReduxStore.m in Sources */,
 				855B5F1D1E8BF86F0041D677 /* AppViewController.m in Sources */,
 				85B32D591E8BFF7C00ECA8E2 /* ReduxState.m in Sources */,
 				855B5F1A1E8BF86F0041D677 /* AppDelegate.m in Sources */,
