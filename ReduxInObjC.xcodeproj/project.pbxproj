@@ -13,6 +13,9 @@
 		855B5F201E8BF86F0041D677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855B5F1E1E8BF86F0041D677 /* Main.storyboard */; };
 		855B5F221E8BF86F0041D677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855B5F211E8BF86F0041D677 /* Assets.xcassets */; };
 		855B5F251E8BF86F0041D677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855B5F231E8BF86F0041D677 /* LaunchScreen.storyboard */; };
+		85B32D561E8BFC4600ECA8E2 /* ReduxAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B32D551E8BFC4600ECA8E2 /* ReduxAction.m */; };
+		85B32D591E8BFF7C00ECA8E2 /* ReduxState.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B32D581E8BFF7C00ECA8E2 /* ReduxState.m */; };
+		85B32D5C1E8C057600ECA8E2 /* ReduxReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B32D5B1E8C057600ECA8E2 /* ReduxReducer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		855B5F211E8BF86F0041D677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		855B5F241E8BF86F0041D677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		855B5F261E8BF86F0041D677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B32D541E8BFC4600ECA8E2 /* ReduxAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReduxAction.h; sourceTree = "<group>"; };
+		85B32D551E8BFC4600ECA8E2 /* ReduxAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReduxAction.m; sourceTree = "<group>"; };
+		85B32D571E8BFF7C00ECA8E2 /* ReduxState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReduxState.h; sourceTree = "<group>"; };
+		85B32D581E8BFF7C00ECA8E2 /* ReduxState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReduxState.m; sourceTree = "<group>"; };
+		85B32D5A1E8C057600ECA8E2 /* ReduxReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReduxReducer.h; sourceTree = "<group>"; };
+		85B32D5B1E8C057600ECA8E2 /* ReduxReducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReduxReducer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		855B5F141E8BF86F0041D677 /* ReduxInObjC */ = {
 			isa = PBXGroup;
 			children = (
+				85B32D5D1E8C058E00ECA8E2 /* Redux */,
 				855B5F181E8BF86F0041D677 /* AppDelegate.h */,
 				855B5F191E8BF86F0041D677 /* AppDelegate.m */,
 				855B5F1B1E8BF86F0041D677 /* AppViewController.h */,
@@ -77,6 +87,19 @@
 				855B5F161E8BF86F0041D677 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85B32D5D1E8C058E00ECA8E2 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				85B32D541E8BFC4600ECA8E2 /* ReduxAction.h */,
+				85B32D551E8BFC4600ECA8E2 /* ReduxAction.m */,
+				85B32D571E8BFF7C00ECA8E2 /* ReduxState.h */,
+				85B32D581E8BFF7C00ECA8E2 /* ReduxState.m */,
+				85B32D5A1E8C057600ECA8E2 /* ReduxReducer.h */,
+				85B32D5B1E8C057600ECA8E2 /* ReduxReducer.m */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				855B5F1D1E8BF86F0041D677 /* AppViewController.m in Sources */,
+				85B32D591E8BFF7C00ECA8E2 /* ReduxState.m in Sources */,
 				855B5F1A1E8BF86F0041D677 /* AppDelegate.m in Sources */,
+				85B32D561E8BFC4600ECA8E2 /* ReduxAction.m in Sources */,
 				855B5F171E8BF86F0041D677 /* main.m in Sources */,
+				85B32D5C1E8C057600ECA8E2 /* ReduxReducer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
