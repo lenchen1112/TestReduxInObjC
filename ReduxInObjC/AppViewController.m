@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  AppViewController.m
 //  ReduxInObjC
 //
-//  Created by 陳冠綸 on 2017/3/29.
-//  Copyright © 2017年 陳冠綸. All rights reserved.
+//  Created by Len Chen on 2017/3/29.
+//  Copyright © 2017年 Len Chen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AppViewController.h"
 
-@interface ViewController ()
+@interface AppViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AppViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
